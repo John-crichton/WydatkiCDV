@@ -1,0 +1,51 @@
+@import '../../main-styles.scss';
+
+.sekcja-lista-elementow {
+    display: flex;
+    padding: 50px;
+     // wyrównanie tekstu do srodka
+     justify-content: center;
+     align-items: center;
+
+    .kontener-lista-elementow {
+        display: flex;
+        max-width: 680px;
+        height: 100%;
+        width: 100%;
+        
+
+        .kolumna-przychody, .kolumna-wydatki {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 0;  // kolumny będa miały ten sam rozmiar niezależnie od zawartości
+            flex-grow: 1;  // 
+            // justify-content: center;
+            // align-items: center;
+
+            h1 {
+                font-family: 'Lato';
+                font-size: 24px;
+                font-weight: 900;
+                text-transform: uppercase;
+            }
+            .lista-elementow {
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+            }
+        }
+        .kolumna-przychody {
+            margin-right: 35px;
+
+            h1 {
+                color: $green;
+            }
+        }
+        .kolumna-wydatki {
+
+            h1 {
+                color: $red;
+            }
+        }
+    }
+}

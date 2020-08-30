@@ -1,0 +1,94 @@
+@import '../../../main-styles.scss';
+
+.root {
+    display: flex;
+    width: 100%;
+    position: relative;  
+    // potrzebne żeby moc ustawic x-button  position: absolute (pierwotnie element będzie się nakładał na każdy wiersz każdej kolumny)
+
+    &:hover {
+        .x-button {
+            opacity: 1;
+            // przezroczystosc jeden oznacza w praktyce niewidoczny
+            transform: scale(1);
+            // skala 0 oznacza że obiekt(rozmiar) będzie zmniejszony do 0 
+        }
+    }
+
+    .x-button {
+        position: absolute;
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        background: $dark;
+
+        // 17 to połowa z 34 szerokości - chcemy ustawic button w połowie w kolumnie i w połowie poza
+        right: -17px; 
+        // 17 to połowa z 34 wysokości - chcemy ustawic button w połowie w kolumnie i w połowie poza 
+        top: -17px;
+        // wstawiamy obrazek svg w obszar x-buttona
+        background-image: url('../../../assets/delete_icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        // efekty pojawiania sie (tutaj zanikania) przycisku - to można sobie podarowac!!! będzie niepotrzebne  
+        transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+        transform: scale(0);
+        opacity: 0;
+
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    
+
+}
+
+.element-listy {
+    display: flex;
+    width: 100%;
+    background-color: $light-grey;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;  // obszar elementu listy będzie klikalny
+    transition: background-color 0.2s ease-out; // przyciemnianie obszaru po hover będzie zgodne z .x-button
+
+    &:hover {
+
+        //darken - wbudowana funkcja sass
+        background-color: darken($light-grey, 10%);
+    }
+
+    .opis {
+        display: flex;
+        flex-grow: 1;
+        font-size: 18px;
+        margin-left: 5px;
+        //wycentrujemy "dzieci"
+        align-items: center;
+
+    }
+    .ilosc {
+        padding: 5px;
+        border-radius: 3px;
+
+    }
+}
+.wydatek {
+    p {
+        color: $red;
+    }
+    .ilosc {
+        background-color: $light-red;
+    }
+}
+.przychod {
+    p {
+        color: $green;
+    }
+    .ilosc {
+        background-color: $light-green;
+    }
+}

@@ -1,0 +1,23 @@
+<div class="body-class">
+<div class="panel-roboczy">
+    <p>Menu</p>
+    <p>Kalkulator</p>
+    <p>Pogodynka</p>
+</div>
+<div class="top-bar">
+    <h1>Kalkulator wydatków i przychodów</h1>
+</div>
+<section class="glowna-sekcja-kalkulacji">
+    <h2 [ngClass]="{'green': bilans >= 0, 'red': bilans <0 }">{{ bilans }}</h2>
+</section>
+<section class="sekcja-dodaj-element">
+    <div class="kontener-dodaj-element">
+        <!-- tu wstrzykujemy komponent dodaj element -->
+        <app-dodaj-element style="padding: 20px;"(formSubmit)="MetodaDodajElement($event)"></app-dodaj-element>
+    </div>
+</section>
+<hr style="margin: 0px">
+<section>
+    <app-lista-elementow [TablicaElementow]="TablicaElementow"(usun)="UsunElement($event)"></app-lista-elementow>
+</section>
+</div>

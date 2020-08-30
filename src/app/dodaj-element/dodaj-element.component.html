@@ -1,0 +1,22 @@
+<form #FormDodanieElementu="ngForm" (ngSubmit)="onSubmit(FormDodanieElementu)">
+    <div class="field is-horizontal">
+        <div class="field-body">
+            <div class="field is-narrow">
+                <!-- is narrow zblizy ponizsze inputy do siebie ( bez tego bedzie biale pole ) -->
+                <p class="control">
+                    <input type="number" required style="width: 100px;" required name="ilosc" class="input" placeholder="Ilosc" [ngModel]="element.ilosc">
+                </p>
+            </div>
+            <div class="field">
+                <p class="control">
+                    <input type="text" required name="opis" class="input" placeholder="Opis" [ngModel]="element.opis">
+                </p>
+            </div>
+            <div class="field is-narrow">
+                <!-- button jest disabled do czasu wpisania wartosci do fields  -->
+                <button type="submit" class="button is-primary" [disabled]="!FormDodanieElementu.valid">Dodaj</button>
+
+            </div>
+        </div>
+    </div>
+</form>

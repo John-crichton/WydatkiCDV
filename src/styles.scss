@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import 'main-styles.scss';
+/* importujemy tu bulme  -framework jak bootstrap */
+
+@import '../node_modules/bulma/bulma.sass';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css"
