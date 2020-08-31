@@ -12,7 +12,7 @@ import { from } from 'rxjs';
 import { EdytujElementComponent } from './edytuj-element/edytuj-element.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// import { MatDialogModule } from '@angular/material/dialog';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    // MatDialogModule
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

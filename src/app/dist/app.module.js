@@ -18,7 +18,7 @@ var lista_elementow_component_1 = require("./lista-elementow/lista-elementow.com
 var lista_elementow_karta_component_1 = require("./lista-elementow/lista-elementow-karta/lista-elementow-karta.component");
 var edytuj_element_component_1 = require("./edytuj-element/edytuj-element.component");
 var animations_1 = require("@angular/platform-browser/animations");
-// import { MatDialogModule } from '@angular/material/dialog';
+var dialog_1 = require("@angular/material/dialog");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -37,6 +37,7 @@ var AppModule = /** @class */ (function () {
                 app_routing_module_1.AppRoutingModule,
                 forms_1.FormsModule,
                 animations_1.BrowserAnimationsModule,
+                dialog_1.MatDialogModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

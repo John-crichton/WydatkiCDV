@@ -11,14 +11,12 @@ każdy komponent musimy w głównym pliku routingu importować ( import itd.) or
 
 w pliku scss w komponencie żeby użyć zmiennych z kolorami globalnymi zdefiniowanymi w main-styles trzeba go (main-styles) zaimportować 
 
-glowna-sekcja-kalkulacji  total-budget-section
-
+glowna-sekcja-kalkulacji 
 
 poniżej użyta funkcja wbudowana w scss lighten 
 &.green {
             color: lighten($color: ,$amount: ) $green;
-			
-			
+						
 			
 cursor: pointer;  właściwość dzieki której na wybranym obszarze pojawi się "łapka"
 
@@ -29,11 +27,11 @@ input poniższy to jakby funkcja do której przypisujemy zmienną "jestPrzychode
 @Input() jestPrzychodem: boolean;  zdefiniujemy wartość defaultową false/true 
 
 ////////////////////////
-klasa element-listy jest w komponncie lista-elementow-karta - "pasek" w którym wpisujemy wartość i opis  (budget-item)
+klasa element-listy jest w komponncie lista-elementow-karta - "pasek" w którym wpisujemy wartość i opis  
 klasa lista-elementow dotyczy komponentu lista-elementow w którym sa kolumny wydatek/przychod 
 
 /////////////
-w lista-elementow-karta klasa x-button roght: 0; przesunie button na maksymalnie prawą strone
+w lista-elementow-karta klasa x-button right: 0; przesunie button na maksymalnie prawą strone
 
 lista-elementow-karta.component.scss zawiera efekty specjalne które nie sa jakoś przesadnie potrzebne  
 
@@ -45,10 +43,6 @@ importujemy angular forms do app.module.ts w dwóch miejscach.
 w dodaj-element.component.html #DodanieElementu to zmianna odnosząca się do formularza ( chodzi o dodanie elementu - submit zatwierdzenie dodania )
 
 
-utworzyliśmy katalog shared żeby wymieniac elementy wspołdzielone czyli każdy wpis z opisem i ilością do użytku przez wiele komponentów
-Element-Dodany.model.ts  1:16:10 około https://www.youtube.com/watch?v=sU4z4Ti-8OQ
-utworzyliśmy tam klasę obiektu o parametrach opis i ilosc ( zmienne globalne dlatego public )
-
 dalej musimy połączyć inputy z modelem czyli dodaj-element.component.html z Element-Dodany.model.ts
 
 problem - 1:19:44  na dodaj-element.component.ts niezdefiniowany element input 
@@ -59,80 +53,12 @@ error TS2304: Cannot find name 'Input'  - znalazłem odpowiedz na stack overflow
 dodaj-element  w inpucie dodajemy required - to oznacza że element jest wymagany 
 
 ///////////////
-nie działa u mnie w kodzie buttona - [disabled]="itemForm.valid"   co to jest itemForm i jak to znależć  wróce do tego później .... 
-ok u mnie się to nazywaFormDodanieElementu i taką ma postać  [disabled]="!FormDodanieElementu.valid"
+ [disabled]="!FormDodanieElementu.valid"
 jak to dopiszemy to będzie niemożliwe kliknięcie buttona"dodaj" bez uprzednio wprowadzonych wartości.
-
-strona-glowna				main-page
-
-lista-elementow				budget-item-list.component
-
-dodaj-element    			add-item-form.component
-
-edytuj-element				edit-item-modal.component
-
-
-
-
 
 
 dodaj-element.component  
 zmienne i selektory 
-
-
-FormDodanieElementu  					    itemForm							id(opisane jako z #  (dodaj-element.component)  FormDodanieElementu.valid  validacja - sprawdzenei czy dodano wartości
-
-ElementDodany  								budgetItem  						nadal input   ( klasa o dwóch właściwościach 
-
-element										item    							 (jako input bedzie nową instancą klasy elementDodany ) wszędzie definiujemy go tak samo 
-
-formSubmit  								formSubmit
-
-TablicaElementow							budgetItems 						tablica - strona glowna
-
-MetodaDodajElement							addItem								tablica - strona glowna
-
-nowyElement 								newItem								tablica - strona glowna
-
-formSubmit									FormSubmit							zatwierdzenie ( button w formularzu )
-
-XButtonKlik()								onXButtonClick						metoda po kiknięciu buttona x usuwającego dodany element 
-
-XKlik										xButtonClick						zmienna do eventemitera ( lista-elementow-karta)
-
-usun 										delete								metoda usuwania (lista-elementow)
-
-MetodaKlikniecieUsun						onDeleteButtonClicked				lista elementow (przesyłanie danych z dziecka (listaelementowkarta) do rodzica (lista elementow)
-
-UsunElement									deleteItem 							metoda na stronie głównej HTML powiązana z metodą usun(z listy elementow) definiujemy na stronie glownej.ts
-
-indexTablicyElementowDodanych				index 								element metody UsunElement(deleteItem)
-
-bilans										totalBudget 						ta wartośc bedzie się wyświetlać na stronie głównej na "displayu"
-
-ZatwierdzFormularz							formSubmit							 edytuj element
-
-jesliZatwierdzony							onSubmitted 						 edytuj element
-
-elementEdytowany							updatedElement
-
-
-
-
-
-metody :
-strona główna 
-MetodaDodajElement							AddItem   dodanie do tablicy elementów nowego elementu ( nowy wiersz się wyświetli ) 
-
-
-
-
-dodaj element.component 
-
-onSubmit  									onSubmit   -   dodaj-element.component  zatwierdzenie dodania elementu 
-
-MetodaKlikniecieUsun						onDeleteButtonClicked
-
 
 
 metoda do kliknięcia buttona 
@@ -148,9 +74,6 @@ potrzebny jest do tego eventemitter w takiej postacji
 @Output() XKlik: EventEmitter<any> = new EventEmitter<any>();  
 
 
-przerwa na 1:38:23 filmu --- do listy elementów dodajemy 
-
-
 @Input, @Output - dekoratory ( w relacji poniędzy modułami między którymi istnieje zależność typu rodzic dziecko) 
 
 przesyłanie danych od rodzica do dziecka: u rodzica deklarujemy właściwość np zmienna ( public name = "cośtam" pliku ts  ) inastępnie bindujemy to z selektorem dziecka ( przykładowo [parentData]="name" ) dziecko (html) - 
@@ -161,14 +84,10 @@ u dziecka deklarujemy @Input('parentData') public name;  możemy teraz używać 
 
 Jeżeli chcemy przesłac dane od dziecka do rodzica to : tu musimy użyc eventu. tworzymy instancje eventemittera (nazwa np childEvent) u dziecka w pliku ts
 @Output public childEvent = new eventEmitter(); 
-w przykładzie posłużono się buttonem z <button (click)="fireEvent()"  fireEvent to metoda 
-fireEvent() {
-this.childEvent.emit("zmienna lub string ");
+
 w komponencie rodzicu - w divie komponentu dziecka !!!  (childEvent)="message=$event"  event prześle dane do rodzica 
 
-
-
-1:45 mniej wiecej - jest modal - którym modyfikujemy element dodany na liście - modal to takie wyskakujące okienko temat kończy się ok 2:10
+ modal - którym modyfikujemy element dodany na liście - modal to takie wyskakujące okienko 
 
 interface - wartość bilansu przedi po update - jeżeli usuniemy lub dodamy element to bilans musi sie aktualizowac 
 
@@ -178,10 +97,12 @@ ngSubmit
 
 bootstrap 
 
-jasny kolor wyświetlacza dla niepoznaki 
+jasny kolor wyświetlacza  
 cyferki damy ciemnozielone i ciemnoczerwone 
 
 
-edytuj-element        edit-item-modal
+edytuj-element        
 
-trzeba doinstalować angular material - z angulara taki bootstrap
+trzeba doinstalować angular material - z angulara  bootstrap
+
+problem z angular material
