@@ -40,6 +40,7 @@ var AppModule = /** @class */ (function () {
                 dialog_1.MatDialogModule
             ],
             providers: [],
+            entryComponents: [edytuj_element_component_1.EdytujElementComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

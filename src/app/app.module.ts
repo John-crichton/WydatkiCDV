@@ -31,6 +31,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDialogModule
   ],
   providers: [],
+  entryComponents: [EdytujElementComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

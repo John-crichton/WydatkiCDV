@@ -11,6 +11,7 @@
                 *ngIf="element.ilosc >=0" 
                 [element]="element"
                 (XKlik)="MetodaKlikniecieUsun(element)"
+                (klikNaElementDodany)="MetodaklikNaElementDodany()"
                 style="display: block; margin-bottom: 20px"></app-lista-elementow-karta>
                 </div>
             </div>           
@@ -20,7 +21,7 @@
             <div class="lista-elementow">
                 <!-- iterujemy po wszystkich elementach tablicy poniżej  -->
                 <div *ngFor="let element of TablicaElementow">  
-                    <!-- styl poniżej rozdziela wiersze dodając margines od dolu -->
+                    <!-- styl poniżej rozdziela wiersze dodają c margines od dolu -->
                     <!-- warunek wydatek musi być ujemny -->
                 <app-lista-elementow-karta
                 *ngIf="element.ilosc < 0" 

@@ -1,8 +1,7 @@
 <div class="root">
     <!-- chcemy dynamicznie zmieniac klasy z wydatkow na przychody bo zmieni sie kolor  -->
     <div class="element-listy" (click)="KlikEdycjaElementuDodanego()"[ngClass]="{'przychod': element.ilosc >=0, 'wydatek': element.ilosc < 0}">  
-        <!-- //  tu sie zatrzymujemy - 51:51 minuta filmu https://www.youtube.com/watch?v=sU4z4Ti-8OQ- będziemy podmieniac klasy angularowo 
-        - jest przychodem zdefiniowaliśmy w pliku ts tego komponentu , przychod i wydatek to klasy dodane do pliku scss tego elementu  -->
+        
         <div class="opis">
             <p>{{element.opis}}</p>
         </div>
