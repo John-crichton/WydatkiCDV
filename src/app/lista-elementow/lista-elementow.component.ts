@@ -12,6 +12,7 @@ export class ListaElementowComponent implements OnInit {
 
   @Input() TablicaElementow: ElementDodany[];
   @Output() usun: EventEmitter<ElementDodany> = new EventEmitter<ElementDodany>();
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -22,7 +23,7 @@ export class ListaElementowComponent implements OnInit {
   MetodaklikNaElementDodany(element: ElementDodany){
     //angular material 
     const dialogRef = this.dialog.open(EdytujElementComponent, {
-      width: '540px',
+      width: '580px',
       data: element
     });
     dialogRef.afterClosed().subscribe(rezultat => {

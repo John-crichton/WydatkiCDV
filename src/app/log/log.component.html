@@ -1,0 +1,11 @@
+<div class="wrapper">
+  <input type="text" placeholder="e-mail" #email>
+  <input type="text" placeholder="hasło" #password>
+
+  <button (click)="log(email, password)">Zaloguj się </button>
+  {{ comUser }}
+
+  <a routerLink="/stronaglowna">strona glowna</a>
+</div>
+
+<router-outlet> </router-outlet>

@@ -13,6 +13,8 @@ import { EdytujElementComponent } from './edytuj-element/edytuj-element.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatDialogModule} from '@angular/material/dialog';
+import { LogComponent } from './log/log.component';
+import { PanelnawiComponent } from './panelnawi/panelnawi.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     DodajElementComponent,
     ListaElementowComponent,
     ListaElementowKartaComponent,
-    EdytujElementComponent
+    EdytujElementComponent,
+    LogComponent,
+    PanelnawiComponent
   ],
   imports: [
     BrowserModule,

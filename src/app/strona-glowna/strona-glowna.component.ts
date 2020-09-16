@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ElementDodany } from 'src/shared/models/element-dodany.model';
 import { Element } from '@angular/compiler';
 
+
+
+
 @Component({
   selector: 'app-strona-glowna',
   templateUrl: './strona-glowna.component.html',

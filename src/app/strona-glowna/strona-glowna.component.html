@@ -3,7 +3,8 @@
     <p>Menu </p>
     <p>Kalkulator </p>
     <p>Pogodynka </p>
-    <p>Login </p>
+    <!-- <p>Login </p> -->
+    <a routerLink="/log"> ekran logowania </a>
 </div>
 <div class="top-bar">
     <h1>Kalkulator wydatków i przychodów</h1>
@@ -22,3 +23,4 @@
     <app-lista-elementow [TablicaElementow]="TablicaElementow"(usun)="UsunElement($event)"></app-lista-elementow>
 </section>
 </div>
+<router-outlet></router-outlet>
