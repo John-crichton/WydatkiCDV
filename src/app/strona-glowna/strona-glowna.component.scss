@@ -1,4 +1,11 @@
 @import '../../main-styles.scss';
+
+.panelnawi{
+    display: flex;
+// wyrównanie tekstu do srodka
+    justify-content: center;
+    align-items: center;
+}
 .body-class {
     max-width: 50%;
     margin-left: auto;
@@ -25,7 +32,7 @@
     height: 68px;
     background : linear-gradient(75deg, rgb(214, 180, 247), rgb(173, 203, 231));
 
-    // wyrównanie tekstu do srodka 
+    // wyrównanie tekstu do srodka
     justify-content: center;
     align-items: center;
 
@@ -67,7 +74,7 @@
 }
 .sekcja-dodaj-element {
 
-    display: flex; 
+    display: flex;
 
      // wyrównanie tekstu do srodka
      justify-content: center;

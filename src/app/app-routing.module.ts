@@ -6,7 +6,7 @@ import {LogComponent} from './log/log.component';
 const routes: Routes = [
   { path: '', component: StronaGlownaComponent },
   { path: 'log', component: LogComponent },
-  { path: 'stronaglowna', component: StronaGlownaComponent },
+  { path: 'wydatki', component: StronaGlownaComponent },
 ];
 
 @NgModule({
