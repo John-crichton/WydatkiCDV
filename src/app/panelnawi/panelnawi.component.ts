@@ -9,6 +9,9 @@ export class PanelnawiComponent implements OnInit {
 
   constructor() { }
 
+public schalter: boolean
+public status:string = "niezalogowany"
+
   ngOnInit(): void {
   }
 

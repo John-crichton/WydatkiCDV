@@ -1,4 +1,4 @@
-// globalne style i zmienne 
+// globalne style i zmienne
 @charset "utf-8";
 
 // Import a Google Font
@@ -7,7 +7,7 @@
 // Set your brand colors
 $purple: #8A4D76;
 $pink: #FA7C91;
-// zmiana kolorów na inne  - wykomentowane 
+// zmiana kolorów na inne  - wykomentowane
 // $brown: #757763;
 // $beige-light: #D0D1CD;
 // $beige-lighter: #EFF0EB;
@@ -48,3 +48,12 @@ $input-shadow: none;
 @import "../node_modules/bulma/sass/components/navbar.sass";
 @import "../node_modules/bulma/sass/layout/hero.sass";
 @import "../node_modules/bulma/sass/layout/section.sass";
+
+.panel-roboczy{
+  display: flex;
+  text-align: center;
+  height: 68px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: inline;
+}

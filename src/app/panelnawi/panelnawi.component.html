@@ -1,9 +1,25 @@
-<div class="panel-roboczy">
-  <a routerLink="/wydatki">Wydatki</a>
+<!-- <div class="has-text-success">
+  <a routerLink="/wydatki">Wydatki </a>
   <a>Kalkulator </a>
   <a>Pogoda </a>
-  <!-- <p>Login </p> -->
-  <a routerLink="/log"> Zaloguj </a>
-
+  <a routerLink="/log">Zaloguj </a>
+  <button  routerLink="/log" >Zaloguj </button>
+</div> -->
+<div class="">
+<div class="columns is-mobile has-text-grey">
+  <div class="column">
+    <button class="button is-primary is-large" routerLink="/log" >Zaloguj </button>
+  </div>
+  <div class="column">
+    <button class="button is-primary is-large" routerLink="/wydatki" [disabled]="!schalter">Wydatki </button>
+  </div>
+  <div class="column">
+    <button class="button is-primary is-large" routerLink="/pogoda" [disabled]="!schalter">Pogoda </button>
+  </div>
+  <div class="column">
+    <!-- <button class="button is-primary is-large">Jeszcze cos </button> -->
+    <p> {{ status }} </p>
+  </div>
+</div>
 </div>
 <router-outlet></router-outlet>
